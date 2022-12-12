@@ -1,4 +1,4 @@
-$exe = $env:APPDATA + "\Java.exe"
+$exe = $env:APPDATA + "\Test.exe"
 
 if (Test-Path $exe) {
   Remove-Item $exe
