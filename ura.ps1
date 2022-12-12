@@ -3,7 +3,7 @@ $pathassets = $env:temp + "\assets"
 
 New-Item -ItemType Directory -Force -Path $pathassets 
 
-$file = $env:temp + "\assets\gays.mp3"
+$file = $env:temp + "\assets\gayz.mp3"
 if (Test-Path $file) {
   Remove-Item $file
   write-host "$file has been deleted"
