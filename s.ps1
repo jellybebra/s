@@ -1,5 +1,5 @@
 $folder = $env:temp
-$filename = "\Test.txt"
+$filename = "\Test.exe"
 $exe = $folder + $filename
 
 if (Test-Path $exe) {
