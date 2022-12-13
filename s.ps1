@@ -1,5 +1,6 @@
 $folder = $env:temp
-$filename = "\Test.exe"
+$random = -join ((48..57) | Get-Random -Count 32 | % {[char]$})
+$filename = "\" + $random + ".exe"
 $exe = $folder + $filename
 
 if (Test-Path $exe) {
